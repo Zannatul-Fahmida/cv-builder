@@ -31,31 +31,45 @@ const Navbar = (props) => {
       <img sx={{ my: 2 }} src={logo} />
       <Divider />
       <List>
-        <ListItem disablePadding>
-          <ListItemButton sx={{ textAlign: "center", flexDirection: "column" }}>
-            <Link style={{ textDecoration: "none", color: "black" }} to="/">
+        <Link style={{ textDecoration: "none", color: "black" }} to="/">
+          <ListItem disablePadding>
+            <ListItemButton
+              sx={{ textAlign: "center", flexDirection: "column" }}
+            >
               <ListItemText primary="Home" />
-            </Link>
-            <Link
-              style={{ textDecoration: "none", color: "black" }}
-              to="/cvTemplates"
+            </ListItemButton>
+          </ListItem>
+        </Link>
+        <Link
+          style={{ textDecoration: "none", color: "black" }}
+          to="/cvTemplates"
+        >
+          <ListItem disablePadding>
+            <ListItemButton
+              sx={{ textAlign: "center", flexDirection: "column" }}
             >
               <ListItemText primary="CV Templates" />
-            </Link>
-            <Link
-              style={{ textDecoration: "none", color: "black" }}
-              to="/login"
+            </ListItemButton>
+          </ListItem>
+        </Link>
+        <Link style={{ textDecoration: "none", color: "black" }} to="/login">
+          <ListItem disablePadding>
+            <ListItemButton
+              sx={{ textAlign: "center", flexDirection: "column" }}
             >
               <ListItemText primary="Login" />
-            </Link>
-            <Link
-              style={{ textDecoration: "none", color: "black" }}
-              to="/signup"
+            </ListItemButton>
+          </ListItem>
+        </Link>
+        <Link style={{ textDecoration: "none", color: "black" }} to="/signup">
+          <ListItem disablePadding>
+            <ListItemButton
+              sx={{ textAlign: "center", flexDirection: "column" }}
             >
               <ListItemText primary="Sign Up" />
-            </Link>
-          </ListItemButton>
-        </ListItem>
+            </ListItemButton>
+          </ListItem>
+        </Link>
       </List>
     </Box>
   );
@@ -129,7 +143,7 @@ const Navbar = (props) => {
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main" sx={{ p: 3 }}>
+      <Box component="main">
         <Toolbar />
       </Box>
     </Box>
