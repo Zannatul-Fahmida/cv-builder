@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../../../images/logo with text.png";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
@@ -12,7 +12,6 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
@@ -116,7 +115,16 @@ const Navbar = (props) => {
               <Button sx={{ color: "black" }}>Login</Button>
             </Link>
             <Link style={{ textDecoration: "none" }} to="/signup">
-              <Button sx={{ backgroundColor: "#6D129D", color: "#ffffff" }}>
+              <Button
+                sx={{
+                  backgroundColor: "#6D129D",
+                  color: "#ffffff",
+                  "&:hover": {
+                    backgroundColor: "#6D129D",
+                    opacity: [0.9, 0.8, 0.7],
+                  },
+                }}
+              >
                 Sign Up
               </Button>
             </Link>
