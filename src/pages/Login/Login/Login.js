@@ -5,6 +5,7 @@ import {
   Divider,
   Grid,
   Paper,
+  Stack,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -14,15 +15,16 @@ import InputLabel from "@mui/material/InputLabel";
 import InputBase from "@mui/material/InputBase";
 import { alpha, styled } from "@mui/material/styles";
 import { Link } from "react-router-dom";
+import CommonFooter from "../../Shared/CommonFooter/CommonFooter";
 
-const BootstrapInput = styled(InputBase)(({ theme }) => ({
+const UserInput = styled(InputBase)(({ theme }) => ({
   "label + &": {
     marginTop: theme.spacing(3),
   },
   "& .MuiInputBase-input": {
     borderRadius: 4,
     position: "relative",
-    backgroundColor: '#ffffff',
+    backgroundColor: "#ffffff",
     border: "1px solid #ced4da",
     fontSize: 16,
     width: "100%",
@@ -61,11 +63,14 @@ const Login = () => {
           item
           xs={12}
           md={6}
+          sx={{textAlign: {xs: "center", md: "start"}}}
           style={{
-            textAlign: "start",
             backgroundColor: "#FDFFA6",
             padding: "50px",
-          }}
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }} 
         >
           <Container
             style={{
@@ -88,8 +93,8 @@ const Login = () => {
             </Box>
           </Container>
         </Grid>
-        <Grid item xs={12} md={6} style={{ padding: "50px" }}>
-          <Container>
+        <Grid item xs={12} md={6} style={{ padding: "60px" }}>
+          <Container sx={{p : 0}}>
             <Paper
               elevation={3}
               style={{ padding: "20px", borderRadius: "10px" }}
@@ -107,7 +112,7 @@ const Login = () => {
                   <InputLabel shrink htmlFor="email-input">
                     Email
                   </InputLabel>
-                  <BootstrapInput
+                  <UserInput
                     placeholder="Enter Your Email Here"
                     id="email-input"
                   />
@@ -116,7 +121,7 @@ const Login = () => {
                   <InputLabel shrink htmlFor="password-input">
                     password
                   </InputLabel>
-                  <BootstrapInput
+                  <UserInput
                     placeholder="Enter Your Password Here"
                     id="email-input"
                   />
@@ -129,24 +134,45 @@ const Login = () => {
                 </Button>
               </Box>
               <Divider style={{ padding: "20px 0" }}>OR</Divider>
-              <Box>
-                <Button variant="contained">Linkedin</Button>
-                <Button variant="contained">Google</Button>
-              </Box>
+              <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
+                <Button
+                  variant="contained"
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    backgroundColor: "#0A66C2",
+                  }}
+                >
+                  <span>in</span> <span>Linkedin</span>
+                </Button>
+                <Button
+                  variant="contained"
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    backgroundColor: "#EF5858",
+                  }}
+                >
+                  <span>G</span> <span>Google</span>
+                </Button>
+              </Stack>
               <Typography style={{ marginTop: "10px" }}>
-                Don't have any account?{" "}
+                Don't have any account?
                 <Link
-                  style={{ textDecoration: "none", color: "#050FFF" }}
+                  style={{ textDecoration: "none", color: "#050FFF", padding: '0 5px' }}
                   to="/signup"
                 >
                   Sign up
-                </Link>{" "}
+                </Link>
                 now
               </Typography>
             </Paper>
           </Container>
         </Grid>
       </Grid>
+      <CommonFooter />
     </div>
   );
 };
