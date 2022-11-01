@@ -4,6 +4,8 @@ import Home from "./pages/Home/Home/Home";
 import NotFound from "./pages/Shared/NotFound/NotFound";
 import Login from "./pages/Login/Login/Login";
 import Signup from "./pages/Login/Signup/Signup";
+import CreateCv from "./pages/CreateCv/CreateCv/CreateCv";
+import CvForm from "./pages/CreateCv/CvForm/CvForm";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,16 @@ const router = createBrowserRouter([
   {
     path: "signup",
     element: <Signup />,
+    errorElement: <NotFound />,
+  },
+  {
+    path: "createCv",
+    element: <CreateCv />,
+    errorElement: <NotFound />,
+  },
+  {
+    path: "cvForm",
+    element: <CvForm />,
     errorElement: <NotFound />,
   },
 ]);

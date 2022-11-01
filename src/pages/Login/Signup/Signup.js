@@ -131,6 +131,7 @@ const Signup = () => {
                   Password
                 </InputLabel>
                 <UserInput
+                type="password"
                   placeholder="Enter Your Password Here"
                   id="password-input"
                 />
@@ -140,6 +141,7 @@ const Signup = () => {
                   Confirm Password
                 </InputLabel>
                 <UserInput
+                type="password"
                   placeholder="Enter Your Confirm Password Here"
                   id="confirm-password-input"
                 />

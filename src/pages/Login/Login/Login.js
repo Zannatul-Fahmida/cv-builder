@@ -113,6 +113,7 @@ const Login = () => {
                     Email
                   </InputLabel>
                   <UserInput
+                  type="email"
                     placeholder="Enter Your Email Here"
                     id="email-input"
                   />
@@ -122,6 +123,7 @@ const Login = () => {
                     password
                   </InputLabel>
                   <UserInput
+                  type="password"
                     placeholder="Enter Your Password Here"
                     id="email-input"
                   />

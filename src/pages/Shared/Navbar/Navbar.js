@@ -51,6 +51,18 @@ const Navbar = (props) => {
             </ListItemButton>
           </ListItem>
         </Link>
+        <Link
+          style={{ textDecoration: "none", color: "black" }}
+          to="/createCv"
+        >
+          <ListItem disablePadding>
+            <ListItemButton
+              sx={{ textAlign: "center", flexDirection: "column" }}
+            >
+              <ListItemText primary="Create CV" />
+            </ListItemButton>
+          </ListItem>
+        </Link>
         <Link style={{ textDecoration: "none", color: "black" }} to="/login">
           <ListItem disablePadding>
             <ListItemButton
@@ -107,6 +119,9 @@ const Navbar = (props) => {
             </Link>
             <Link style={{ textDecoration: "none" }} to="/cvTemplates">
               <Button sx={{ color: "black" }}>CV Templates</Button>
+            </Link>
+            <Link style={{ textDecoration: "none" }} to="/createCv">
+              <Button sx={{ color: "black" }}>Create CV</Button>
             </Link>
             <Link
               style={{ color: "black", textDecoration: "none" }}
