@@ -67,10 +67,13 @@ const CvForm = () => {
             direction="row"
             spacing={2}
             justifyContent="space-between"
+            alignItems="center"
             sx={{ backgroundColor: "#ffffff", my: 2, p: 2 }}
           >
             <Typography sx={{ fontWeight: "bold" }}>CV 1</Typography>
-            <EditIcon sx={{ color: "#6D129D" }} />
+            <Button>
+              <EditIcon sx={{ color: "#6D129D" }} />
+            </Button>
           </Stack>
           <Box sx={{ backgroundColor: "#ffffff", p: 2 }}>
             <Typography
@@ -131,38 +134,101 @@ const CvForm = () => {
               sx={{ my: 1 }}
             >
               <Grid item xs={4} sm={4} md={3}>
-                <Button sx={{ backgroundColor: "#FF9787", color: "#ffffff" }}>
+                <Button
+                  sx={{
+                    backgroundColor: "#FF9787",
+                    color: "#ffffff",
+                    "&:hover": {
+                      backgroundColor: "#FF9787",
+                      opacity: [0.9, 0.8, 0.7],
+                    },
+                  }}
+                >
                   + Date of birth
                 </Button>
               </Grid>
               <Grid item xs={4} sm={4} md={3}>
-                <Button sx={{ backgroundColor: "#FF9787", color: "#ffffff" }}>
-                  + Date of birth
+                <Button
+                  sx={{
+                    backgroundColor: "#FF9787",
+                    color: "#ffffff",
+                    "&:hover": {
+                      backgroundColor: "#FF9787",
+                      opacity: [0.9, 0.8, 0.7],
+                    },
+                  }}
+                >
+                  + Nationality
                 </Button>
               </Grid>
               <Grid item xs={4} sm={4} md={3}>
-                <Button sx={{ backgroundColor: "#FF9787", color: "#ffffff" }}>
-                  + Date of birth
+                <Button
+                  sx={{
+                    backgroundColor: "#FF9787",
+                    color: "#ffffff",
+                    "&:hover": {
+                      backgroundColor: "#FF9787",
+                      opacity: [0.9, 0.8, 0.7],
+                    },
+                  }}
+                >
+                  + Passport
                 </Button>
               </Grid>
               <Grid item xs={4} sm={4} md={3}>
-                <Button sx={{ backgroundColor: "#FF9787", color: "#ffffff" }}>
-                  + Date of birth
+                <Button
+                  sx={{
+                    backgroundColor: "#FF9787",
+                    color: "#ffffff",
+                    "&:hover": {
+                      backgroundColor: "#FF9787",
+                      opacity: [0.9, 0.8, 0.7],
+                    },
+                  }}
+                >
+                  + Gender
                 </Button>
               </Grid>
               <Grid item xs={4} sm={4} md={3}>
-                <Button sx={{ backgroundColor: "#FF9787", color: "#ffffff" }}>
-                  + Date of birth
+                <Button
+                  sx={{
+                    backgroundColor: "#FF9787",
+                    color: "#ffffff",
+                    "&:hover": {
+                      backgroundColor: "#FF9787",
+                      opacity: [0.9, 0.8, 0.7],
+                    },
+                  }}
+                >
+                  + Marital status
                 </Button>
               </Grid>
               <Grid item xs={4} sm={4} md={3}>
-                <Button sx={{ backgroundColor: "#FF9787", color: "#ffffff" }}>
-                  + Date of birth
+                <Button
+                  sx={{
+                    backgroundColor: "#FF9787",
+                    color: "#ffffff",
+                    "&:hover": {
+                      backgroundColor: "#FF9787",
+                      opacity: [0.9, 0.8, 0.7],
+                    },
+                  }}
+                >
+                  + Military service
                 </Button>
               </Grid>
               <Grid item xs={4} sm={4} md={3}>
-                <Button sx={{ backgroundColor: "#FF9787", color: "#ffffff" }}>
-                  + Date of birth
+                <Button
+                  sx={{
+                    backgroundColor: "#FF9787",
+                    color: "#ffffff",
+                    "&:hover": {
+                      backgroundColor: "#FF9787",
+                      opacity: [0.9, 0.8, 0.7],
+                    },
+                  }}
+                >
+                  + Driving License
                 </Button>
               </Grid>
             </Grid>
@@ -179,38 +245,101 @@ const CvForm = () => {
               sx={{ my: 1 }}
             >
               <Grid item xs={4} sm={4} md={3}>
-                <Button sx={{ backgroundColor: "#FF9787", color: "#ffffff" }}>
-                  + Date of birth
+                <Button
+                  sx={{
+                    backgroundColor: "#FF9787",
+                    color: "#ffffff",
+                    "&:hover": {
+                      backgroundColor: "#FF9787",
+                      opacity: [0.9, 0.8, 0.7],
+                    },
+                  }}
+                >
+                  + Website
                 </Button>
               </Grid>
               <Grid item xs={4} sm={4} md={3}>
-                <Button sx={{ backgroundColor: "#FF9787", color: "#ffffff" }}>
-                  + Date of birth
+                <Button
+                  sx={{
+                    backgroundColor: "#FF9787",
+                    color: "#ffffff",
+                    "&:hover": {
+                      backgroundColor: "#FF9787",
+                      opacity: [0.9, 0.8, 0.7],
+                    },
+                  }}
+                >
+                  + Linkedin
                 </Button>
               </Grid>
               <Grid item xs={4} sm={4} md={3}>
-                <Button sx={{ backgroundColor: "#FF9787", color: "#ffffff" }}>
-                  + Date of birth
+                <Button
+                  sx={{
+                    backgroundColor: "#FF9787",
+                    color: "#ffffff",
+                    "&:hover": {
+                      backgroundColor: "#FF9787",
+                      opacity: [0.9, 0.8, 0.7],
+                    },
+                  }}
+                >
+                  + Twitter
                 </Button>
               </Grid>
               <Grid item xs={4} sm={4} md={3}>
-                <Button sx={{ backgroundColor: "#FF9787", color: "#ffffff" }}>
-                  + Date of birth
+                <Button
+                  sx={{
+                    backgroundColor: "#FF9787",
+                    color: "#ffffff",
+                    "&:hover": {
+                      backgroundColor: "#FF9787",
+                      opacity: [0.9, 0.8, 0.7],
+                    },
+                  }}
+                >
+                  + Github
                 </Button>
               </Grid>
               <Grid item xs={4} sm={4} md={3}>
-                <Button sx={{ backgroundColor: "#FF9787", color: "#ffffff" }}>
-                  + Date of birth
+                <Button
+                  sx={{
+                    backgroundColor: "#FF9787",
+                    color: "#ffffff",
+                    "&:hover": {
+                      backgroundColor: "#FF9787",
+                      opacity: [0.9, 0.8, 0.7],
+                    },
+                  }}
+                >
+                  + Discord
                 </Button>
               </Grid>
               <Grid item xs={4} sm={4} md={3}>
-                <Button sx={{ backgroundColor: "#FF9787", color: "#ffffff" }}>
-                  + Date of birth
+                <Button
+                  sx={{
+                    backgroundColor: "#FF9787",
+                    color: "#ffffff",
+                    "&:hover": {
+                      backgroundColor: "#FF9787",
+                      opacity: [0.9, 0.8, 0.7],
+                    },
+                  }}
+                >
+                  + Facebook
                 </Button>
               </Grid>
               <Grid item xs={4} sm={4} md={3}>
-                <Button sx={{ backgroundColor: "#FF9787", color: "#ffffff" }}>
-                  + Date of birth
+                <Button
+                  sx={{
+                    backgroundColor: "#FF9787",
+                    color: "#ffffff",
+                    "&:hover": {
+                      backgroundColor: "#FF9787",
+                      opacity: [0.9, 0.8, 0.7],
+                    },
+                  }}
+                >
+                  + Instagram
                 </Button>
               </Grid>
             </Grid>
@@ -220,11 +349,44 @@ const CvForm = () => {
             spacing={2}
             justifyContent="space-between"
             alignItems="center"
-            sx={{ backgroundColor: '#ffffff', my: 2 , p: 2}}
+            sx={{ backgroundColor: "#ffffff", my: 2, p: 2 }}
           >
-            <Button sx={{ backgroundColor: "#00A32E", color: "#ffffff" }}>Next</Button>
-            <Button sx={{ backgroundColor: "#6D129D", color: "#ffffff" }}>Save</Button>
-            <Button sx={{ backgroundColor: "#FD5A5A", color: "#ffffff" }}>Cancel</Button>
+            <Button
+              sx={{
+                backgroundColor: "#00A32E",
+                color: "#ffffff",
+                "&:hover": {
+                  backgroundColor: "#00A32E",
+                  opacity: [0.9, 0.8, 0.7],
+                },
+              }}
+            >
+              Next
+            </Button>
+            <Button
+              sx={{
+                backgroundColor: "#6D129D",
+                color: "#ffffff",
+                "&:hover": {
+                  backgroundColor: "#6D129D",
+                  opacity: [0.9, 0.8, 0.7],
+                },
+              }}
+            >
+              Save
+            </Button>
+            <Button
+              sx={{
+                backgroundColor: "#FD5A5A",
+                color: "#ffffff",
+                "&:hover": {
+                  backgroundColor: "#FD5A5A",
+                  opacity: [0.9, 0.8, 0.7],
+                },
+              }}
+            >
+              Cancel
+            </Button>
           </Stack>
         </Box>
         <Item></Item>
