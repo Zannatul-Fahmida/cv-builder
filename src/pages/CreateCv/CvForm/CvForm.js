@@ -137,6 +137,7 @@ const CvForm = () => {
                 <Button
                   sx={{
                     backgroundColor: "#FF9787",
+                    width: "100%",
                     color: "#ffffff",
                     "&:hover": {
                       backgroundColor: "#FF9787",
@@ -151,6 +152,7 @@ const CvForm = () => {
                 <Button
                   sx={{
                     backgroundColor: "#FF9787",
+                    width: "100%",
                     color: "#ffffff",
                     "&:hover": {
                       backgroundColor: "#FF9787",
@@ -165,6 +167,7 @@ const CvForm = () => {
                 <Button
                   sx={{
                     backgroundColor: "#FF9787",
+                    width: "100%",
                     color: "#ffffff",
                     "&:hover": {
                       backgroundColor: "#FF9787",
@@ -179,6 +182,7 @@ const CvForm = () => {
                 <Button
                   sx={{
                     backgroundColor: "#FF9787",
+                    width: "100%",
                     color: "#ffffff",
                     "&:hover": {
                       backgroundColor: "#FF9787",
@@ -193,6 +197,7 @@ const CvForm = () => {
                 <Button
                   sx={{
                     backgroundColor: "#FF9787",
+                    width: "100%",
                     color: "#ffffff",
                     "&:hover": {
                       backgroundColor: "#FF9787",
@@ -207,6 +212,7 @@ const CvForm = () => {
                 <Button
                   sx={{
                     backgroundColor: "#FF9787",
+                    width: "100%",
                     color: "#ffffff",
                     "&:hover": {
                       backgroundColor: "#FF9787",
@@ -221,6 +227,7 @@ const CvForm = () => {
                 <Button
                   sx={{
                     backgroundColor: "#FF9787",
+                    width: "100%",
                     color: "#ffffff",
                     "&:hover": {
                       backgroundColor: "#FF9787",
@@ -248,6 +255,7 @@ const CvForm = () => {
                 <Button
                   sx={{
                     backgroundColor: "#FF9787",
+                    width: "100%",
                     color: "#ffffff",
                     "&:hover": {
                       backgroundColor: "#FF9787",
@@ -262,6 +270,7 @@ const CvForm = () => {
                 <Button
                   sx={{
                     backgroundColor: "#FF9787",
+                    width: "100%",
                     color: "#ffffff",
                     "&:hover": {
                       backgroundColor: "#FF9787",
@@ -276,6 +285,7 @@ const CvForm = () => {
                 <Button
                   sx={{
                     backgroundColor: "#FF9787",
+                    width: "100%",
                     color: "#ffffff",
                     "&:hover": {
                       backgroundColor: "#FF9787",
@@ -290,6 +300,7 @@ const CvForm = () => {
                 <Button
                   sx={{
                     backgroundColor: "#FF9787",
+                    width: "100%",
                     color: "#ffffff",
                     "&:hover": {
                       backgroundColor: "#FF9787",
@@ -304,6 +315,7 @@ const CvForm = () => {
                 <Button
                   sx={{
                     backgroundColor: "#FF9787",
+                    width: "100%",
                     color: "#ffffff",
                     "&:hover": {
                       backgroundColor: "#FF9787",
@@ -318,6 +330,7 @@ const CvForm = () => {
                 <Button
                   sx={{
                     backgroundColor: "#FF9787",
+                    width: "100%",
                     color: "#ffffff",
                     "&:hover": {
                       backgroundColor: "#FF9787",
@@ -332,6 +345,7 @@ const CvForm = () => {
                 <Button
                   sx={{
                     backgroundColor: "#FF9787",
+                    width: "100%",
                     color: "#ffffff",
                     "&:hover": {
                       backgroundColor: "#FF9787",
