@@ -1,10 +1,17 @@
-import { Stack, Box, Button, Typography, TextField, Grid } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import React from "react";
 import Navbar from "../../Shared/Navbar/Navbar";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import PersonalInfo from "../PersonalInfo/PersonalInfo";
 import EditIcon from "@mui/icons-material/Edit";
-import user from "../../../images/Component 1.png";
+import AddIcon from "@mui/icons-material/Add";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import Profile from "../Profile/Profile";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "#ffffff",
@@ -17,6 +24,11 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const CvForm = () => {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
   return (
     <div>
       <Navbar />
@@ -27,7 +39,10 @@ const CvForm = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Box sx={{ width: "100%" }}>
+        <Stack
+          sx={{ width: "100%", height: "100vh", overflowY: "scroll" }}
+          spacing={2}
+        >
           <Stack direction="row" spacing={2} justifyContent="space-between">
             <Button
               sx={{
@@ -75,289 +90,222 @@ const CvForm = () => {
               <EditIcon sx={{ color: "#6D129D" }} />
             </Button>
           </Stack>
-          <Box sx={{ backgroundColor: "#ffffff", p: 2 }}>
-            <Typography
-              variant="h6"
-              sx={{ color: "#6D129D", textAlign: "start", fontWeight: "bold" }}
+          <Accordion
+            sx={{ boxShadow: "none", border: "none" }}
+            expanded={expanded === "panel1"}
+            onChange={handleChange("panel1")}
+          >
+            <AccordionSummary
+              expandIcon={
+                expanded === "panel1" ? <KeyboardArrowUpIcon /> : <AddIcon />
+              }
+              aria-controls="panel1a-content"
+              id="panel1a-header"
             >
-              Edit personal details
-            </Typography>
-            <Stack
-              direction="row"
-              spacing={2}
-              justifyContent="space-between"
-              alignItems="center"
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#6D129D",
+                  textAlign: "start",
+                  fontWeight: "bold",
+                }}
+              >
+                Edit personal details
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <PersonalInfo />
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            sx={{ boxShadow: "none", border: "none" }}
+            expanded={expanded === "panel2"}
+            onChange={handleChange("panel2")}
+          >
+            <AccordionSummary
+              expandIcon={
+                expanded === "panel2" ? <KeyboardArrowUpIcon /> : <AddIcon />
+              }
+              aria-controls="panel2a-content"
+              id="panel2a-header"
             >
-              <Box sx={{ width: "100%" }}>
-                <img src={user}></img>
-              </Box>
-              <Stack spacing={2} sx={{ width: "100%" }}>
-                <TextField id="name" label="Full Name" variant="outlined" />
-                <TextField id="address" label="Address" variant="outlined" />
-                <TextField
-                  id="job-title"
-                  label="Job title"
-                  variant="outlined"
-                />
-              </Stack>
-            </Stack>
-            <Stack
-              direction="row"
-              spacing={2}
-              justifyContent="space-between"
-              alignItems="center"
-              sx={{ my: 2 }}
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#6D129D",
+                  textAlign: "start",
+                  fontWeight: "bold",
+                }}
+              >
+                Create profile
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Profile />
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            sx={{ boxShadow: "none", border: "none" }}
+            expanded={expanded === "panel3"}
+            onChange={handleChange("panel3")}
+          >
+            <AccordionSummary
+              expandIcon={
+                expanded === "panel3" ? <KeyboardArrowUpIcon /> : <AddIcon />
+              }
+              aria-controls="panel3a-content"
+              id="panel3a-header"
             >
-              <TextField
-                sx={{ width: "100%" }}
-                id="email"
-                label="Email"
-                variant="outlined"
-              />
-              <TextField
-                sx={{ width: "100%" }}
-                id="phone"
-                label="Phone"
-                variant="outlined"
-              />
-            </Stack>
-            <Typography
-              variant="h6"
-              sx={{ color: "#6D129D", textAlign: "start", fontWeight: "bold" }}
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#6D129D",
+                  textAlign: "start",
+                  fontWeight: "bold",
+                }}
+              >
+                Create education
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <PersonalInfo />
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            sx={{ boxShadow: "none", border: "none" }}
+            expanded={expanded === "panel4"}
+            onChange={handleChange("panel4")}
+          >
+            <AccordionSummary
+              expandIcon={
+                expanded === "panel4" ? <KeyboardArrowUpIcon /> : <AddIcon />
+              }
+              aria-controls="panel4a-content"
+              id="panel4a-header"
             >
-              Personal information
-            </Typography>
-            <Grid
-              container
-              spacing={2}
-              columns={{ xs: 4, sm: 8, md: 12 }}
-              sx={{ my: 1 }}
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#6D129D",
+                  textAlign: "start",
+                  fontWeight: "bold",
+                }}
+              >
+                Create professional experience
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <PersonalInfo />
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            sx={{ boxShadow: "none", border: "none" }}
+            expanded={expanded === "panel5"}
+            onChange={handleChange("panel5")}
+          >
+            <AccordionSummary
+              expandIcon={
+                expanded === "panel5" ? <KeyboardArrowUpIcon /> : <AddIcon />
+              }
+              aria-controls="panel5a-content"
+              id="panel5a-header"
             >
-              <Grid item xs={4} sm={4} md={3}>
-                <Button
-                  sx={{
-                    backgroundColor: "#FF9787",
-                    width: "100%",
-                    color: "#ffffff",
-                    "&:hover": {
-                      backgroundColor: "#FF9787",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
-                >
-                  + Date of birth
-                </Button>
-              </Grid>
-              <Grid item xs={4} sm={4} md={3}>
-                <Button
-                  sx={{
-                    backgroundColor: "#FF9787",
-                    width: "100%",
-                    color: "#ffffff",
-                    "&:hover": {
-                      backgroundColor: "#FF9787",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
-                >
-                  + Nationality
-                </Button>
-              </Grid>
-              <Grid item xs={4} sm={4} md={3}>
-                <Button
-                  sx={{
-                    backgroundColor: "#FF9787",
-                    width: "100%",
-                    color: "#ffffff",
-                    "&:hover": {
-                      backgroundColor: "#FF9787",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
-                >
-                  + Passport
-                </Button>
-              </Grid>
-              <Grid item xs={4} sm={4} md={3}>
-                <Button
-                  sx={{
-                    backgroundColor: "#FF9787",
-                    width: "100%",
-                    color: "#ffffff",
-                    "&:hover": {
-                      backgroundColor: "#FF9787",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
-                >
-                  + Gender
-                </Button>
-              </Grid>
-              <Grid item xs={4} sm={4} md={3}>
-                <Button
-                  sx={{
-                    backgroundColor: "#FF9787",
-                    width: "100%",
-                    color: "#ffffff",
-                    "&:hover": {
-                      backgroundColor: "#FF9787",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
-                >
-                  + Marital status
-                </Button>
-              </Grid>
-              <Grid item xs={4} sm={4} md={3}>
-                <Button
-                  sx={{
-                    backgroundColor: "#FF9787",
-                    width: "100%",
-                    color: "#ffffff",
-                    "&:hover": {
-                      backgroundColor: "#FF9787",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
-                >
-                  + Military service
-                </Button>
-              </Grid>
-              <Grid item xs={4} sm={4} md={3}>
-                <Button
-                  sx={{
-                    backgroundColor: "#FF9787",
-                    width: "100%",
-                    color: "#ffffff",
-                    "&:hover": {
-                      backgroundColor: "#FF9787",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
-                >
-                  + Driving License
-                </Button>
-              </Grid>
-            </Grid>
-            <Typography
-              variant="h6"
-              sx={{ color: "#6D129D", textAlign: "start", fontWeight: "bold" }}
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#6D129D",
+                  textAlign: "start",
+                  fontWeight: "bold",
+                }}
+              >
+                Create skill
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <PersonalInfo />
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            sx={{ boxShadow: "none", border: "none" }}
+            expanded={expanded === "panel6"}
+            onChange={handleChange("panel6")}
+          >
+            <AccordionSummary
+              expandIcon={
+                expanded === "panel6" ? <KeyboardArrowUpIcon /> : <AddIcon />
+              }
+              aria-controls="panel6a-content"
+              id="panel6a-header"
             >
-              Links
-            </Typography>
-            <Grid
-              container
-              spacing={2}
-              columns={{ xs: 4, sm: 8, md: 12 }}
-              sx={{ my: 1 }}
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#6D129D",
+                  textAlign: "start",
+                  fontWeight: "bold",
+                }}
+              >
+                Create languages
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <PersonalInfo />
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            sx={{ boxShadow: "none", border: "none" }}
+            expanded={expanded === "panel7"}
+            onChange={handleChange("panel7")}
+          >
+            <AccordionSummary
+              expandIcon={
+                expanded === "panel7" ? <KeyboardArrowUpIcon /> : <AddIcon />
+              }
+              aria-controls="panel7a-content"
+              id="panel7a-header"
             >
-              <Grid item xs={4} sm={4} md={3}>
-                <Button
-                  sx={{
-                    backgroundColor: "#FF9787",
-                    width: "100%",
-                    color: "#ffffff",
-                    "&:hover": {
-                      backgroundColor: "#FF9787",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
-                >
-                  + Website
-                </Button>
-              </Grid>
-              <Grid item xs={4} sm={4} md={3}>
-                <Button
-                  sx={{
-                    backgroundColor: "#FF9787",
-                    width: "100%",
-                    color: "#ffffff",
-                    "&:hover": {
-                      backgroundColor: "#FF9787",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
-                >
-                  + Linkedin
-                </Button>
-              </Grid>
-              <Grid item xs={4} sm={4} md={3}>
-                <Button
-                  sx={{
-                    backgroundColor: "#FF9787",
-                    width: "100%",
-                    color: "#ffffff",
-                    "&:hover": {
-                      backgroundColor: "#FF9787",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
-                >
-                  + Twitter
-                </Button>
-              </Grid>
-              <Grid item xs={4} sm={4} md={3}>
-                <Button
-                  sx={{
-                    backgroundColor: "#FF9787",
-                    width: "100%",
-                    color: "#ffffff",
-                    "&:hover": {
-                      backgroundColor: "#FF9787",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
-                >
-                  + Github
-                </Button>
-              </Grid>
-              <Grid item xs={4} sm={4} md={3}>
-                <Button
-                  sx={{
-                    backgroundColor: "#FF9787",
-                    width: "100%",
-                    color: "#ffffff",
-                    "&:hover": {
-                      backgroundColor: "#FF9787",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
-                >
-                  + Discord
-                </Button>
-              </Grid>
-              <Grid item xs={4} sm={4} md={3}>
-                <Button
-                  sx={{
-                    backgroundColor: "#FF9787",
-                    width: "100%",
-                    color: "#ffffff",
-                    "&:hover": {
-                      backgroundColor: "#FF9787",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
-                >
-                  + Facebook
-                </Button>
-              </Grid>
-              <Grid item xs={4} sm={4} md={3}>
-                <Button
-                  sx={{
-                    backgroundColor: "#FF9787",
-                    width: "100%",
-                    color: "#ffffff",
-                    "&:hover": {
-                      backgroundColor: "#FF9787",
-                      opacity: [0.9, 0.8, 0.7],
-                    },
-                  }}
-                >
-                  + Instagram
-                </Button>
-              </Grid>
-            </Grid>
-          </Box>
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#6D129D",
+                  textAlign: "start",
+                  fontWeight: "bold",
+                }}
+              >
+                Create hobbies
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <PersonalInfo />
+            </AccordionDetails>
+          </Accordion>
+          <Accordion
+            sx={{ boxShadow: "none", border: "none" }}
+            expanded={expanded === "panel8"}
+            onChange={handleChange("panel8")}
+          >
+            <AccordionSummary
+              expandIcon={
+                expanded === "panel8" ? <KeyboardArrowUpIcon /> : <AddIcon />
+              }
+              aria-controls="panel8a-content"
+              id="panel8a-header"
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#6D129D",
+                  textAlign: "start",
+                  fontWeight: "bold",
+                }}
+              >
+                Create custom
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <PersonalInfo />
+            </AccordionDetails>
+          </Accordion>
           <Stack
             direction="row"
             spacing={2}
@@ -365,18 +313,6 @@ const CvForm = () => {
             alignItems="center"
             sx={{ backgroundColor: "#ffffff", my: 2, p: 2 }}
           >
-            <Button
-              sx={{
-                backgroundColor: "#00A32E",
-                color: "#ffffff",
-                "&:hover": {
-                  backgroundColor: "#00A32E",
-                  opacity: [0.9, 0.8, 0.7],
-                },
-              }}
-            >
-              Next
-            </Button>
             <Button
               sx={{
                 backgroundColor: "#6D129D",
@@ -402,8 +338,8 @@ const CvForm = () => {
               Cancel
             </Button>
           </Stack>
-        </Box>
-        <Item></Item>
+        </Stack>
+        <Item style={{ minHeight: "100vh" }}></Item>
       </Stack>
     </div>
   );
