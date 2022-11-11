@@ -1,12 +1,21 @@
-import React from 'react';
-import Editor from '../../Shared/Editor/Editor';
+import { Typography } from "@mui/material";
+import React from "react";
+import ProfileEditor from "./ProfileEditor";
 
 const Profile = () => {
-    return (
-        <div>
-            <Editor />
-        </div>
-    );
+  return (
+    <div>
+      <Typography
+        variant="caption"
+        sx={{ textAlign: "start" }}
+        display="block"
+        gutterBottom
+      >
+        text
+      </Typography>
+      <ProfileEditor />
+    </div>
+  );
 };
 
 export default Profile;

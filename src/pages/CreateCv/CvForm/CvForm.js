@@ -12,6 +12,12 @@ import EditIcon from "@mui/icons-material/Edit";
 import AddIcon from "@mui/icons-material/Add";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Profile from "../Profile/Profile";
+import Education from "../Education/Education";
+import Experience from "../Experience/Experience";
+import Skill from "../Skill/Skill";
+import Languages from "../Languages/Languages";
+import Hobbies from "../Hobbies/Hobbies";
+import Custom from "../Custom/Custom";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "#ffffff",
@@ -168,7 +174,7 @@ const CvForm = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <PersonalInfo />
+              <Education />
             </AccordionDetails>
           </Accordion>
           <Accordion
@@ -195,7 +201,7 @@ const CvForm = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <PersonalInfo />
+              <Experience />
             </AccordionDetails>
           </Accordion>
           <Accordion
@@ -222,7 +228,7 @@ const CvForm = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <PersonalInfo />
+              <Skill />
             </AccordionDetails>
           </Accordion>
           <Accordion
@@ -249,7 +255,7 @@ const CvForm = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <PersonalInfo />
+              <Languages />
             </AccordionDetails>
           </Accordion>
           <Accordion
@@ -276,7 +282,7 @@ const CvForm = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <PersonalInfo />
+              <Hobbies />
             </AccordionDetails>
           </Accordion>
           <Accordion
@@ -303,7 +309,7 @@ const CvForm = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <PersonalInfo />
+              <Custom />
             </AccordionDetails>
           </Accordion>
           <Stack

@@ -1,5 +1,4 @@
 import React from "react";
-import { Quill } from "react-quill";
 
 const CustomUndo = () => (
   <svg viewBox="0 0 18 18">
@@ -48,7 +47,6 @@ export const formats = [
   "italic",
   "underline",
   "align",
-  "strike",
   "script",
   "blockquote",
   "background",
@@ -68,7 +66,6 @@ const EditorToolbar = () => {
         <button className="ql-bold" />
         <button className="ql-italic" />
         <button className="ql-underline" />
-        <button className="ql-strike" />
       </span>
       <span className="ql-formats">
         <button className="ql-list" value="ordered" />
