@@ -1,29 +1,32 @@
-import React from 'react';
+import React, { useState } from "react";
 import ReactQuill from "react-quill";
-import EditorToolbar, { modules, formats } from "../../Shared/Editor/EditorToolbar";
 import "react-quill/dist/quill.snow.css";
 
+const modules = {
+  toolbar: [
+    ["bold", "italic", "underline"],
+    ["blockquote"],
+    [{ list: "ordered" }, { list: "bullet" }],
+    [{ indent: "-1" }, { indent: "+1" }, { align: [] }],
+    ["link"],
+  ],
+};
+
 const ProfileEditor = () => {
-    const [state, setState] = React.useState({ value: null });
-    const handleChange = (value) => {
-      setState({ value });
-    };
-    return (
-        <div>
-          <ReactQuill
-            style={{ height: "375px" }}
-            theme="snow"
-            value={state.value}
-            onChange={handleChange}
-            placeholder={
-              "Introduce yourself by pitching your skill & explaining how they can be of value to a company"
-            }
-            modules={modules}
-            formats={formats}
-          />
-          <EditorToolbar />
-        </div>
-    );
+  const [value, setValue] = useState("");
+  return (
+    <div>
+      <ReactQuill
+        style={{ height: "275px", padding: "0 0 40px 0" }}
+        theme="snow"
+        onChange={setValue}
+        placeholder={
+          "Introduce yourself by pitching your skill & explaining how they can be of value to a company"
+        }
+        modules={modules}
+      />
+    </div>
+  );
 };
 
 export default ProfileEditor;

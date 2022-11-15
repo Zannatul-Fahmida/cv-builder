@@ -106,6 +106,7 @@ const Education = () => {
       >
         Description
       </Typography>
+      <EduEditor />
     </Stack>
   );
 };

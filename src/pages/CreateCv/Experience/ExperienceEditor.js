@@ -12,7 +12,7 @@ const modules = {
   ],
 };
 
-const EduEditor = () => {
+const ExperienceEditor = () => {
   const [value, setValue] = useState("");
   return (
     <div>
@@ -29,4 +29,4 @@ const EduEditor = () => {
   );
 };
 
-export default EduEditor;
+export default ExperienceEditor;

@@ -2,6 +2,7 @@ import { Box, Checkbox, FormControlLabel, FormGroup, Stack, TextField, Typograph
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import React from "react";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import ExperienceEditor from "./ExperienceEditor";
 
 const Experience = () => {
   const [startValue, setStartValue] = React.useState(null);
@@ -96,6 +97,7 @@ const Experience = () => {
       >
         Description
       </Typography>
+      <ExperienceEditor />
     </Stack>
   );
 };
