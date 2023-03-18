@@ -7,15 +7,15 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import EduEditor from "./EduEditor";
 
 const Education = () => {
-  const [startValue, setStartValue] = React.useState(null);
-  const [endValue, setEndValue] = React.useState(null);
+  const [startValue, setStartValue] = useState(null);
+  const [endValue, setEndValue] = useState(null);
   return (
     <Stack spacing={2} sx={{ width: "100%" }}>
       <TextField id="degree" label="Degree" variant="outlined" />
